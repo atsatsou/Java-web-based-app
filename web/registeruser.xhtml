@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Register User</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/newTemplate.xhtml">
+
+            <ui:define name="content" >
+                <p:fieldset legend="Register Form">
+                    <h:form>
+                    <table>
+                        <tr> 
+                            <td><h:outputLabel for="username" value="Username:" /></td>
+                            <td> <h:inputText 
+                                id="username" value="#{userreg.username}"
+                                required="true"/> 
+                             <h:message for="username"/> 
+                            </td>
+                            
+                         </tr> <br/>
+                         <tr>
+                             <td><h:outputLabel for="password" value="Password:" /></td>
+                             <td>
+                                <h:inputSecret  
+                                id="password" value="#{userreg.password}"
+                                required="true"/> 
+                                <h:message for="password"/>
+                             </td>
+                         </tr>  
+                         <tr>
+                            <td><h:outputLabel for="confirmpassword" value="ConfirmPassword:" /></td>
+                             <td>
+                                <h:inputSecret 
+                                id="confirmpassword" value="#{userreg.confirmpassword}"
+                                required="true" />
+                                 <h:message for="confirmpassword"/>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td> <h:outputLabel for="fname" value="First Name:" /></td>
+                             <td>  
+                                <h:inputText  id="fname" value="#{userreg.firstName}"
+                                          required="true"/> 
+                                <h:message for="fname" />
+                             </td>
+                        
+                         </tr>
+                         <tr>
+                             <td> <h:outputLabel for="lname" value="Last Name:" /></td>
+                             <td> 
+                                <h:inputText 
+                                id="lname" value="#{userreg.lastName}"
+                                required="true"/>
+                                 <h:message for="lname" />
+                             </td>
+                         </tr> 
+                          <tr>
+                            <td><h:outputLabel for="gender" value="Gender:" /></td>
+                            <td> <h:selectOneRadio 
+                                id="sex" value="#{userreg.gender}" required="true">
+                                <f:selectItem itemLabel="Male" itemValue="male" />
+                                <f:selectItem itemLabel="Female" itemValue="female" />
+                                </h:selectOneRadio> 
+                            <h:message for="sex" /></td>
+                          </tr>
+                         <tr>
+                             <td> <h:outputLabel for="email" value="Email Address:"/></td>
+                             <td>
+                                 <h:inputText  
+                                  id="email" value="#{userreg.email}" required="true"/>
+                                 <h:message for="email" />
+                             </td>
+                         </tr>
+                    </table>
+                        <p><p:commandButton value="Register"
+                                            action="#{userreg.confirmuser()}"> </p:commandButton>&nbsp;&nbsp;<p:commandButton value="Cancel" type="reset" immediate="true" ></p:commandButton></p>
+                      
+                    </h:form>
+                </p:fieldset>
+
+            </ui:define>
+          
+        </ui:composition>
+
+    </h:body>
+</html>
+

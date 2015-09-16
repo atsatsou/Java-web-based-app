@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp"
+      >
+    <h:head>
+        <title>UsersList</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="../templates/newTemplate.xhtml">
+            <ui:define name="content">
+
+                <h1><h:outputLabel>/Users:</h:outputLabel></h1>
+                <p:dataTable id="checkboxDT" var="Users" rows="10">
+                    <f:facet name="header">
+                        Users
+                    </f:facet>
+                    <p:column selectionMode="multiple" style="width:40px;text-align:center"/>
+                    <p:column headerText="Action">
+                        <h:outputText value="" />
+                    </p:column>
+                    <p:column headerText="Id">
+                        <h:outputText value="1" />
+                    </p:column>
+                    <p:column headerText="Group">
+                        <h:outputText value="Developers" />
+                    </p:column>
+                    <p:column headerText="Name">
+                        <h:outputText value="Mahi" />
+                    </p:column>
+                    <p:column headerText="Email">
+                        <h:outputText value="atsatsou92@gmail.com" />
+                    </p:column>
+                </p:dataTable>
+                <p:commandButton onclick="PF('dlg').show()" value="Add User" class="btn-group" ></p:commandButton>
+                <p:dialog header="Add User" widgetVar="dlg" 
+                          resizable="false" styleClass="notesDialog"     closeOnEscape="true" maximizable="true" minimizable="true" modal="true" hideEffect="fade"  >
+                    <h:form id="form1">
+                        <p:tabView>
+                            <p:tab title="General"> 
+                                <h:panelGrid columns="2" style="margin-bottom:100px ">
+                                    <h:outputLabel for="Name " value="Name:"/> <h:inputText  value="#{backingBean.firstName}"/>
+                                    <h:outputLabel for="Password " value="Password:"/> <h:inputText  value="#{backingBean.password}"/>
+                                    <h:outputLabel for="Email " value="Email:"/> <h:inputText  value="#{backingBean.email}"/>
+                                    <h:outputLabel for="Username " value="Username:"/> <h:inputText  value="#{backingBean.username}"/>
+                                </h:panelGrid>
+                            </p:tab>
+                        </p:tabView>
+                        <p:commandButton id="submitButton" value="Save" update=":display"
+                                         oncomplete="PF('dlg').hide(); "  />
+                    </h:form>
+                </p:dialog>
+                <p:outputPanel id="display" style="display:block;margin-top:10px;">
+                    <h:outputText id="name" value="Hello #{backingBean.firstName}"
+                                  rendered="#{not empty BackingBean.firstName}" />
+                </p:outputPanel>
+            </ui:define>
+
+        </ui:composition>
+
+
+
+
+
+
+
+
+    </h:body>
+</html>
+
