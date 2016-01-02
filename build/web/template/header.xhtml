@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+  
+    <ui:composition>
+       
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h:outputLink value="index.xhtml"><img src="#{resource['images:logo-ateithe.gif']}" height="45" width="60" alt="Teithe Logo" align="left"> </img>  </h:outputLink>
+                    <h:link value="TMWProject"   class="navbar-brand" outcome="index.xhtml"></h:link>
+               
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li><h:link value="Dashboard" outcome="index.xhtml?faces-redirect=true"></h:link>
+                        
+                         </li>
+                       
+               <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects</a>
+                <ul class="dropdown-menu" role="menu">
+                   <c:if id="idGroup" test="#{loginController.isAdmin()}">
+                       <li> <h:link value="Add Projects" outcome="/admin/AddProject.xhtml?faces-redirect=true"/></li>
+                  </c:if>
+                 <c:otherwise>
+                      <li><h:link value="View Projects" outcome="/users/ViewProject.xhtml?faces-redirect=true"></h:link></li>
+                  </c:otherwise>
+                </ul>
+               </li>
+                        
+               <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Users</a>
+               <ul class="dropdown-menu" role="menu">
+                     <c:if id="idGroup" test="#{loginController.isAdmin()}">
+                       <li><h:link value="Add Users" outcome="/admin/AddUser.xhtml?faces-redirect=true"></h:link></li>
+                     </c:if>
+                   <c:otherwise>
+                      <li><h:link value="View Users" outcome="/users/ViewUser.xhtml?faces-redirect=true"></h:link></li>
+                  </c:otherwise>
+                </ul>
+               </li>   
+             
+                                    
+               <li class="dropdown">
+                   <c:if id="idGroup" test="#{loginController.isAdmin()}">
+                      <li><h:link value="Assignments" outcome="/admin/Assignments.xhtml?faces-redirect=true"></h:link></li>
+                   </c:if>
+               </li>
+                        
+                        <li><a href="#" ><img src="#{resource['images:icon_help.png']}"> Help </img></a></li>
+                       
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">#{loginController.idUser} <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                
+                               <c:if id="idGroup" test="#{loginController.isAdmin()}">
+                                <li><h:link value="Profile" outcome="/admin/Profile.xhtml?faces-redirect=true" > <img src="#{resource['images:user.png']}" align="middle" ></img></h:link></li>
+                               </c:if>
+                                <c:otherwise>
+                                    <li><h:link value="Profile" outcome="/users/Profile.xhtml?faces-redirect=true" > <img src="#{resource['images:user.png']}" align="middle" ></img></h:link></li>
+                                </c:otherwise>
+                                
+                                <li class="divider"></li>
+                                <li><h:link value="Log out" class="fa fa-sign-out" outcome="/SignIn.xhtml"> &nbsp;&nbsp;</h:link></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search..." />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </ui:composition>
+</html>
+

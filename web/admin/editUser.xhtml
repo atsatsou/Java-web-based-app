@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      
+          
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Edit User</title>
+    </h:head>
+ <body>
+     
+        <ui:composition template="../template/newTemplate.xhtml">
+
+            <ui:define name="content">
+         
+        <f:view>
+
+
+          
+          <div class="panel panel-primary"> <!-- Panel-->
+              <div class="panel-heading">Edit User</div>
+                <h:form class="from-horizontal">
+              
+                    <h:form>
+                     
+                        <h:panelGrid columns="2">
+                             <div class="form-group">
+                             <h:outputLabel value="Username" for="idUser" />
+                              <div class="col-sm-6">
+                            <h:inputText id="idUser" value="#{userController.u.idUser}"  required="true" requiredMessage="The IdUser field is required."/>
+                              </div>
+                              </div>
+                            <div class="form-group">
+                            <h:outputLabel value="Password:" for="password" />
+                              <div class="col-sm-6">
+                            <h:inputText id="password" value="#{userController.u.password}" title="Password" required="true" requiredMessage="The Password field is required."/>
+                              </div>
+                              </div>
+                              <div class="form-group">
+                            <h:outputLabel value="Name:" for="name" />
+                            <div class="col-sm-6">
+                            <h:inputText id="name" value="#{userController.u.name}" title="Name" />
+                            </div>  
+                            </div>
+                            <div class="form-group">
+                            <h:outputLabel value="Surname:" for="surname" />
+                            <div class="col-sm-6">
+                            <h:inputText id="surname" value="#{userController.u.surname}" title="Surname" />
+                            </div>
+                            </div>
+                            <div class="form-group">
+                            <h:outputLabel value="Email:" for="email" />
+                            <div class="col-sm-6">
+                            <h:inputText id="email" value="#{userController.u.email}" title="Email" />
+                            </div>
+                            </div>
+                           <br/><br/> 
+                             <h:form>
+                      <div class="panel-footer">
+                          <h:commandButton value="Save" class="btn btn-primary" action="#{userController.edit()}"/> &nbsp;  
+                          <h:commandButton value="Cancel" immediate="true" action="AddUser.xhtml" class="btn btn-default"/> 
+                      </div>
+                    </h:form>
+                        </h:panelGrid>
+                        
+                    </h:form>
+
+            </h:form>
+          </div> <!--End Panel-->
+         
+        
+
+        </f:view>
+        	
+            </ui:define>
+          
+        </ui:composition>
+    </body>
+
+</html>
+

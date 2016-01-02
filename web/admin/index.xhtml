@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../template/newTemplate.xhtml">
+        <h:head>
+            <title>TMWProject Managment</title>
+            <h:outputStylesheet name="../css/bootstrap.min.css"/>
+        </h:head>
+        <ui:define name="content">
+              <h1 class="page-header "> <i class="fa fa-tachometer"></i> Dashboard</h1>
+             
+              <h:form>
+              <p> <strong>Filter By:</strong> &nbsp; 
+                  <h:selectOneMenu value="">
+                     
+                  </h:selectOneMenu>
+              </p>
+              </h:form>
+              <h3> Assigned to Me </h3>
+        
+                   
+              <f:view>
+                  <h:form>
+                      <h:dataTable value="#{assignmentController.assignmentsList()}" var="item" class="table table-bordered">
+                          <h:column>
+                              <f:facet name="header">
+                                  <h:outputText value="ProjectName"/>
+                              </f:facet>
+                              <h:outputText value="#{item.projectName}"/>
+                          </h:column>
+                          <h:column>
+                              <f:facet name="header">
+                                  <h:outputText value="Priority"/>
+                              </f:facet>
+                              <h:outputText value="#{item.priority}"/>
+                          </h:column>
+                          <h:column>
+                              <f:facet name="header">
+                                  <h:outputText value="Type"/>
+                              </f:facet>
+                              <h:outputText value="#{item.type}"/>
+                          </h:column>
+                           <h:column>
+                              <f:facet name="header">
+                                  <h:outputText value="Assigned to"/>
+                              </f:facet>
+                              <h:outputText value="#{item.toString()}"/>
+                          </h:column>
+                        <h:column>
+                          <f:facet name="header">
+                           <h:outputText value="Action"/>
+                         </f:facet>
+                            <h:commandLink value="" action="#{assignmentController.delete(item)}" onclick="return confirm('Are you Sure?')"   >&nbsp;&nbsp;<img src="#{resource['images/icons/remove.png']}" align="middle"></img></h:commandLink>
+                          
+                      </h:column>
+                      </h:dataTable>
+                      
+                        
+                  </h:form>
+              </f:view>
+
+          
+              
+           
+           
+        </ui:define>
+
+
+    </ui:composition>
+</html>
+

@@ -3,34 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/com/tmw/filter/LoginPageFilter.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/resources/bootstrap-3.3.4-dist/bootstrap-3.3.4-dist/css/bootstrap.min.css</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/loginerror.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/CalendarView.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/conf/persistence.xml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/ProjectsBean.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/registeruser.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/LanguageBean.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/admin/adminindex.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/index.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/editorView.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/UserRegBean.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/LoginBean.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/WEB-INF/faces-config.xml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/com/tmw/login/entity/Login.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/admin/AddProjects.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/WEB-INF/web.xml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/SignIn.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/templates/newTemplate.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/com/tmw/domain/Projects/service/ProjectsFacadeREST.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/resources/bootstrap-3.3.4-dist/bootstrap-3.3.4-dist/js/bootstrap.min.js</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/com/tmw/registration/entity/User.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/admin/AddTasks.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/templates/content.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/src/java/Authenticate.java</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/admin/AddUsers.xhtml</file>
-            <file>file:/C:/Users/Μάχη/Documents/NetBeansProjects/TMWProject/web/templates/header.xhtml</file>
+            <file>file:/C:/Users/Μάχη/Desktop/Example/src/java/com/TMWProject/Entity/UserGroup.java</file>
+            <file>file:/C:/Users/Μάχη/Desktop/Example/src/java/com/TMWProject/Controller/UserController.java</file>
+            <file>file:/C:/Users/Μάχη/Desktop/Example/src/java/com/TMWProject/Controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>
